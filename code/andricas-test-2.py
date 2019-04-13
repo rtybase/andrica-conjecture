@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 primes = []
 
-def calculateLog(sqrt_p1, sqrt_p2):
+def calculate_log(sqrt_p1, sqrt_p2):
     sqrt_1_p2 = 1.0 + sqrt_p2
     r = math.log(sqrt_1_p2/(1.0 + sqrt_p1))
     return r * sqrt_1_p2
@@ -26,7 +26,7 @@ for i in xrange(1, len(primes)):
     sqrt_p1 = math.sqrt(primes[i-1])
     sqrt_diff.append(sqrt_p2 - sqrt_p1)
     diff.append(primes[i] - primes[i-1])
-    log_calcs.append(calculateLog(sqrt_p1, sqrt_p2))
+    log_calcs.append(calculate_log(sqrt_p1, sqrt_p2))
     x.append(i)
 
 #for i in xrange(len(sqrt_diff)):
